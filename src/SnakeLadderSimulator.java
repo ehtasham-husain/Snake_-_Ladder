@@ -4,9 +4,11 @@ public class SnakeLadderSimulator {
     public static final int Ladder = 2;
     public static void main(String[] args) {
         int Player_Position = 0;
+        int RollsDiceCount = 0;
         while (Player_Position < 100) {
             int RollsDice = (int) Math.floor(Math.random() * 10) % 6 + 1;
-            System.out.println(RollsDice);
+            RollsDiceCount++;
+            System.out.println("Rolls Dice::🎲🎲-"+RollsDice);
             int Options = (int) Math.floor(Math.random() * 10) % 3;
             System.out.println(Options);
             switch (Options) {
@@ -30,5 +32,6 @@ public class SnakeLadderSimulator {
                 Player_Position -= RollsDice;
             System.out.println("Player Position : " +Player_Position );
         }
+        System.out.println("Total 🎰Rolls Dice Counting=="+RollsDiceCount);
     }
 }
