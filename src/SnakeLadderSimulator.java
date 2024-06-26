@@ -1,3 +1,6 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
 public class SnakeLadderSimulator {
     public static final int No_Play = 0;
     public static final int Snake = 1;
@@ -8,23 +11,31 @@ public class SnakeLadderSimulator {
         while (Player_Position < 100) {
             int RollsDice = (int) Math.floor(Math.random() * 10) % 6 + 1;
             RollsDiceCount++;
-            System.out.println("Rolls Dice::🎲🎲-"+RollsDice);
-            int Options = (int) Math.floor(Math.random() * 10) % 3;
-            System.out.println(Options);
-            switch (Options) {
-                case No_Play:
-                    System.out.println("Player No Play::🚫🚫");
+            System.out.println("Rolls Dice::"+RollsDice);
+            
+            switch (Player_Position) {
+                case 15:
+                    System.out.println("SNAKE::");
+                    Player_Position -= 5;
                     break;
-                case Snake:
-                    System.out.println("SNAKE::🐍🐍");
-                    Player_Position -= RollsDice;
+                case 28:
+                    System.out.println("SNAKE::");
+                    Player_Position -= 10;
                     break;
-                case Ladder:
-                    System.out.println("LADDER::🔗🔗");
-                    Player_Position += RollsDice;
+                    case 35:
+                    System.out.println("SNAKE::");
+                    Player_Position -= 10;
+                    break;
+                case 55:
+                    System.out.println("LADDER::");
+                    Player_Position += 35;
+                    break;
+                    case 70:
+                    System.out.println("LADDER::");
+                    Player_Position += 17;
                     break;
                 default:
-                    System.out.println("Some error occured");
+                    Player_Position += RollsDice;
             }
             if (Player_Position < 0)
                 Player_Position = 0;
@@ -32,6 +43,6 @@ public class SnakeLadderSimulator {
                 Player_Position -= RollsDice;
             System.out.println("Player Position : " +Player_Position );
         }
-        System.out.println("Total 🎰Rolls Dice Counting=="+RollsDiceCount);
+        System.out.println("Total Rolls Dice Counting=="+RollsDiceCount);
     }
 }
