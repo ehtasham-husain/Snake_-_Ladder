@@ -22,7 +22,7 @@ public class SnakeLadderSimulator {
                     System.out.println("SNAKE::");
                     Player_Position -= 10;
                     break;
-                    case 35:
+                case 35:
                     System.out.println("SNAKE::");
                     Player_Position -= 10;
                     break;
@@ -33,6 +33,14 @@ public class SnakeLadderSimulator {
                     case 70:
                     System.out.println("LADDER::");
                     Player_Position += 17;
+                    break;
+                case 75:
+                    System.out.println("LADDER::");
+                    Player_Position += 17;
+                    break;
+                case 95:
+                    System.out.println("SNAKE::");
+                    Player_Position -= 80;
                     break;
                 default:
                     Player_Position += RollsDice;
